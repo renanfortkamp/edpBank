@@ -1,0 +1,26 @@
+{
+    "clientes":[
+        {
+            "name":"Renan for",
+            "cpf":32146788029,
+            "cep":88120889,
+            "email":"renanfor@gmail.com",
+            "senha":"123",
+            "numeroConta":"123",
+            "saldo":23000
+
+
+        },
+        {
+            "name":"JoaoRibeiro",
+            "cpf":34546767021,
+            "cep":88130589,
+            "email":"joaoribeiro@hotmail.com",
+            "senha":"jr1234",
+            "numeroConta":"223370",
+            "saldo":13000
+        }
+    ]
+
+    
+}
