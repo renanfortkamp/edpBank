@@ -10,29 +10,29 @@ import {
 import React, { useEffect, useState } from "react";
 import { CmStyles } from "../Styles/CmStyles";
 
-export default function SingIn() {
+export default function SingIn({navigation}) {
    
     const [dataClientes, setDataClientes] = useState([]);
     const [conta, setConta] = useState("");
     const [senha, setSenha] = useState("");
-    const [contaValida,setContaValida] = useState(false);
-    const [senhaValida,setSenhaValida] = useState(false);
   
     function enter() {
      
       if (conta != "" && senha != "") {
-        let validado = dataClientes.some((cliente)=>{
-          return cliente.numeroConta == conta && cliente.senha == senha
+        let cliente = []
+        let validado = dataClientes.some((clientes)=>{
+          if(clientes.numeroConta == conta && clientes.senha == senha){
+            cliente = clientes
+            return clientes
+          }
         })
-        if(validado == true){
-          alert("Cliente Validado")
+        if(validado ){
+          navigation.navigate('Conta', {cliente:cliente})
         }else{alert("Cliente Invalido")}  
 
       } else {
           alert("Digite senha e login");
       }
-      setContaValida(false)
-      setSenhaValida(false)
   }
 
    
